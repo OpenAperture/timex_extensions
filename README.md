@@ -1,5 +1,7 @@
 # OpenAperture.Timex.Extensions
 
+[![Build Status](https://semaphoreci.com/api/v1/projects/46c93fd1-1940-4c81-a861-609300876053/394912/badge.svg)](https://semaphoreci.com/perceptive/timex_extensions)
+
 This reusable Elixir library contains logic extending the Timex modules.
 
 * get_elapased_timestamp
