@@ -3,7 +3,7 @@
 #
 # This module contains logic extending the Timex modules (https://github.com/bitwalker/timex)
 #
-defmodule CloudOS.Timex.Extensions do
+defmodule OpenAperture.Timex.Extensions do
  use Timex
 
   @doc """

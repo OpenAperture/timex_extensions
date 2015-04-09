@@ -1,4 +1,4 @@
-# CloudOS.Timex.Extensions
+# OpenAperture.Timex.Extensions
 
 This reusable Elixir library contains logic extending the Timex modules.
 

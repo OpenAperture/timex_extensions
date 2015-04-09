@@ -1,4 +1,4 @@
-defmodule CloudOS.Timex.Extensions.Mixfile do
+defmodule OpenAperture.Timex.Extensions.Mixfile do
   use Mix.Project
 
   def project do

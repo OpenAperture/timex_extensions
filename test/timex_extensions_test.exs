@@ -1,10 +1,10 @@
 require Timex.Time
 
-defmodule CloudOS.Timex.ExtensionsTest do
+defmodule OpenAperture.Timex.ExtensionsTest do
   use ExUnit.Case
   use Timex
 
-  alias CloudOS.Timex.Extensions
+  alias OpenAperture.Timex.Extensions
 
   test "convert to date" do
   	date = Extensions.date_from_unix_timestamp(1415813100)
