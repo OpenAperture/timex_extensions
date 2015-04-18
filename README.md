@@ -4,7 +4,7 @@
 
 This reusable Elixir library contains logic extending the Timex modules.
 
-* get_elapased_timestamp
+* get_elapsed_timestamp
   * Method to evaluate the elapsed time (against now) and convert to a human-readable string.
 
 * date_from_unix_timestamp
