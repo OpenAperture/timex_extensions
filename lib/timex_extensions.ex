@@ -12,7 +12,7 @@ defmodule OpenAperture.Timex.Extensions do
   ## Options
 
   The `start_time` option was the starting Timex.Time struct
-  
+
   ## Return Values
 
   String containing the timestamp
@@ -41,7 +41,7 @@ defmodule OpenAperture.Timex.Extensions do
           timestamp_hours = Time.elapsed(start_time, :hours)
           if (timestamp_hours < 0) do #time will be negative if in the future
             timestamp_hours = timestamp_hours * -1
-          end          
+          end
 
           if (timestamp_hours < 24) do
             "#{round timestamp_hours} hour(s)"
@@ -49,7 +49,7 @@ defmodule OpenAperture.Timex.Extensions do
             timestamp_days = Time.elapsed(start_time, :days)
             if (timestamp_days < 0) do #time will be negative if in the future
               timestamp_days = timestamp_days * -1
-            end  
+            end
 
             if (timestamp_days < 7) do
               "#{round timestamp_days} day(s)"
@@ -57,26 +57,26 @@ defmodule OpenAperture.Timex.Extensions do
               timestamp_weeks = Time.elapsed(start_time, :weeks)
               if (timestamp_weeks < 0) do #time will be negative if in the future
                 timestamp_weeks = timestamp_weeks * -1
-              end 
-                            
+              end
+
               "#{round timestamp_weeks} week(s)"
-            end            
+            end
           end
         end
-      end      
+      end
     end
   end
 
   @doc """
   Method to convert a Unix timestamp (Integer) into a Timex.Date struct
   https://github.com/bitwalker/timex/blob/master/lib/date/date.ex
- 
+
   ## Options
-  
-  The `timestamp` options is an Integer unix timestamp (http://en.wikipedia.org/wiki/Unix_time) 
-  
+
+  The `timestamp` options is an Integer unix timestamp (http://en.wikipedia.org/wiki/Unix_time)
+
   ## Return Values
-  
+
   Timex.Date struct
   """
   def date_from_unix_timestamp(timestamp) do
@@ -87,13 +87,13 @@ defmodule OpenAperture.Timex.Extensions do
   @doc """
   Method to convert a Unix timestamp (Integer) into a Timex.Time struct
   https://github.com/bitwalker/timex/blob/master/lib/time/time.ex
- 
+
   ## Options
-  
-  The `timestamp` options is an Integer unix timestamp (http://en.wikipedia.org/wiki/Unix_time) 
-  
+
+  The `timestamp` options is an Integer unix timestamp (http://en.wikipedia.org/wiki/Unix_time)
+
   ## Return Values
-  
+
   Timex.Time struct
   """
   def time_from_unix_timestamp(timestamp) do
@@ -104,19 +104,19 @@ defmodule OpenAperture.Timex.Extensions do
   @doc """
   As suggested here (http://erlang.2086793.n4.nabble.com/Working-with-dates-td2097402.html), method
   to convert a unix timestamp into Gregorian calendar seconds
-  
+
   ## Options
-  
-  The `timestamp` options is an Integer unix timestamp (http://en.wikipedia.org/wiki/Unix_time) 
-  
+
+  The `timestamp` options is an Integer unix timestamp (http://en.wikipedia.org/wiki/Unix_time)
+
   ## Return Values
-  
+
   The # of Gregorian seconds (http://www.erlang.org/doc/man/calendar.html#datetime_to_gregorian_seconds-1) - seconds from epoch
   """
   def unix_timestamp_to_gregorian_seconds(timestamp) do
     {days, {hours, minutes, seconds}} = :calendar.seconds_to_daystime( timestamp )
     date = :calendar.gregorian_days_to_date( days )
-    :calendar.datetime_to_gregorian_seconds( {date, {hours, minutes, seconds}} )  	
+    :calendar.datetime_to_gregorian_seconds( {date, {hours, minutes, seconds}} )
   end
 
   #Copy of non-exported method Timex.Time.from(value, :secs) - https://github.com/bitwalker/timex/blob/master/lib/time/time.ex#L76
@@ -134,5 +134,5 @@ defmodule OpenAperture.Timex.Extensions do
   #https://github.com/bitwalker/timex/blob/master/lib/time/time.ex#L288
   defp mdivmod(a) do
     divmod(a, 1_000_000)
-  end 	
+  end
 end
