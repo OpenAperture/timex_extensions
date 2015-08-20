@@ -17,7 +17,7 @@ defmodule OpenAperture.Timex.Extensions do
 
   String containing the timestamp
   """
-  @spec get_elapsed_timestamp(term) :: String.t()
+  @spec get_elapsed_timestamp(term) :: String.t
   def get_elapsed_timestamp(start_time) do
     if (start_time == nil) do
       "<unknown>"
