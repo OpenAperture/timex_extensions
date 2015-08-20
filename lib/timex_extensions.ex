@@ -97,7 +97,7 @@ defmodule OpenAperture.Timex.Extensions do
   Timex.Time struct
   """
   def time_from_unix_timestamp(timestamp) do
-  	gregorian_seconds = unix_timestamp_to_gregorian_seconds(timestamp)
+    gregorian_seconds = unix_timestamp_to_gregorian_seconds(timestamp)
     Time.add(Time.now(), seconds_to_time(gregorian_seconds))
   end
 
