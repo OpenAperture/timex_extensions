@@ -15,3 +15,7 @@ This reusable Elixir library contains logic extending the Timex modules.
 
 * unix_timestamp_to_gregorian_seconds
   * Method to convert a unix timestamp into Gregorian calendar seconds
+
+## Contributing
+
+To contribute to OpenAperture development, view our [contributing guide](http://openaperture.io/dev_resources/contributing.html)
